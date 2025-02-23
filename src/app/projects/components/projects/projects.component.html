@@ -1,0 +1,5 @@
+<!-- <p>projects works!</p> -->
+<div class="container">
+  <app-projects-table [ngClass]="{ 'full-width': !selectedProject }"></app-projects-table>
+  <app-project-details *ngIf="selectedProject"></app-project-details>
+</div>

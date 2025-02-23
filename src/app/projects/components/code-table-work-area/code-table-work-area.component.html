@@ -1,0 +1,39 @@
+<button mat-button routerLink="/">
+  <mat-icon>arrow_back</mat-icon>
+  Projects
+</button>
+<table mat-table [dataSource] = 'dataSource' class="mat-elevation-z8">
+
+  <ng-container matColumnDef="rowCount">
+    <th mat-header-cell *matHeaderCellDef> Row Count </th>
+    <td mat-cell *matCellDef="let element"> {{ element.rowCount }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tableName">
+    <th mat-header-cell *matHeaderCellDef> Table Name </th>
+    <td mat-cell *matCellDef="let element"> {{ element.tableName }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="newUpdateFlag">
+    <th mat-header-cell *matHeaderCellDef> New/Update Flag </th>
+    <td mat-cell *matCellDef="let element"> {{ element.newUpdateFlag }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pk1">
+    <th mat-header-cell *matHeaderCellDef> Pk.1 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.pk1 }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pk2">
+    <th mat-header-cell *matHeaderCellDef> Pk.2 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.pk2 }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pk3">
+    <th mat-header-cell *matHeaderCellDef> Pk.3 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.pk3 }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,17 @@
+.selected {
+  background-color: #c8e6c9; /* Example color for selected row */
+}
+.info-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+div {
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+.mat-header-row {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 1;
+}

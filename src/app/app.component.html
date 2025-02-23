@@ -1,0 +1,36 @@
+<mat-sidenav-container class="example-container">
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" [opened] = "isSidebarOpen">
+    <mat-toolbar>Logo</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="toggleSidebar()">
+        Projects
+      </a>
+      <a mat-list-item routerLink="/productionTables" (click)="toggleSidebar()">
+        Production Tables
+      </a>
+      <a mat-list-item routerLink="/admin" (click)="toggleSidebar()">
+        Admin
+      </a>
+      <a mat-list-item routerLink="/rugs" (click)="toggleSidebar()">
+        RUGS
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Toggle Button for Sidebar -->
+      <button mat-icon-button (click)="toggleSidebar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      CAT
+    </mat-toolbar>
+
+    <!-- Routed Content Goes Here -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,28 @@
+.example-container {
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+mat-sidenav {
+  border-radius: 0 !important; /* Remove border-radius */
+}
+mat-toolbar {
+  background: #3f51b5;
+  color: white;
+}
+
+mat-nav-list a {
+  display: flex;
+  align-items: center;
+}
+
+mat-nav-list a mat-icon {
+  margin-right: 10px;
+}
+
+
+button {
+  color: white;
+}

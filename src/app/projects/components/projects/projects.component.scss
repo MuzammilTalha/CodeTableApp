@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+app-poject-table, app-project-details {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
