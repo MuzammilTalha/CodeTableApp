@@ -16,36 +16,29 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ProjectsHomeComponent } from './components/projects-home/projects-home.component';
 import { MatTabsModule } from '@angular/material/tabs';  // Import MatTabsModule
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ProjectService } from './services/project.service';
-@NgModule({
-  declarations: [
-    ProjectsComponent,
-    CodeTableWorkAreaComponent,
-    ProjectsTableComponent,
-    ProjectDetailsComponent,
-    ProjectsHomeComponent
-  ],
-  imports: [
-    CommonModule,
-    ProjectsRoutingModule,
-    MatIconModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatNativeDateModule,
-    MatInputModule,
-    MatButtonModule,
-    MatTabsModule,
-    HttpClientModule,
-  ],
-  providers: [
-    { provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS },
-    { provide: ProjectService, useClass: ProjectService }
-
-  ]
-})
+@NgModule({ declarations: [
+        ProjectsComponent,
+        CodeTableWorkAreaComponent,
+        ProjectsTableComponent,
+        ProjectDetailsComponent,
+        ProjectsHomeComponent
+    ], imports: [CommonModule,
+        ProjectsRoutingModule,
+        MatIconModule,
+        MatTableModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatNativeDateModule,
+        MatInputModule,
+        MatButtonModule,
+        MatTabsModule], providers: [
+        { provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS },
+        { provide: ProjectService, useClass: ProjectService },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class ProjectsModule { }
