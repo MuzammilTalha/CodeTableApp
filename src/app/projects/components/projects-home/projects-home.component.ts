@@ -4,9 +4,10 @@ import { ProjectService } from '../../services/project.service';
 import { Project_Type } from '../../models/project';
 
 @Component({
-  selector: 'app-projects-home',
-  templateUrl: './projects-home.component.html',
-  styleUrls: ['./projects-home.component.scss']
+    selector: 'app-projects-home',
+    templateUrl: './projects-home.component.html',
+    styleUrls: ['./projects-home.component.scss'],
+    standalone: false
 })
 export class ProjectsHomeComponent {
 

@@ -4,9 +4,10 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
-  selector: 'app-project-details',
-  templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.scss']
+    selector: 'app-project-details',
+    templateUrl: './project-details.component.html',
+    styleUrls: ['./project-details.component.scss'],
+    standalone: false
 })
 export class ProjectDetailsComponent {
   projectForm: FormGroup;

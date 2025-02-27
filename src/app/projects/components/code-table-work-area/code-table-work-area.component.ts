@@ -3,9 +3,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CodeTable } from '../../models/project';
 
 @Component({
-  selector: 'app-code-table-work-area',
-  templateUrl: './code-table-work-area.component.html',
-  styleUrls: ['./code-table-work-area.component.scss']
+    selector: 'app-code-table-work-area',
+    templateUrl: './code-table-work-area.component.html',
+    styleUrls: ['./code-table-work-area.component.scss'],
+    standalone: false
 })
 export class CodeTableWorkAreaComponent {
   displayedColumns: string[] = ['rowCount', 'tableName', 'newUpdateFlag', 'pk1', 'pk2', 'pk3'];

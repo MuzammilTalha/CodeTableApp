@@ -6,9 +6,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { mockData } from '../../mock_data/mockproject';
 
 @Component({
-  selector: 'app-projects-table',
-  templateUrl: './projects-table.component.html',
-  styleUrls: ['./projects-table.component.scss']
+    selector: 'app-projects-table',
+    templateUrl: './projects-table.component.html',
+    styleUrls: ['./projects-table.component.scss'],
+    standalone: false
 })
 export class ProjectsTableComponent implements OnInit, OnDestroy {
   dataSource = new MatTableDataSource<any>([]);
