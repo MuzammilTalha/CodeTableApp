@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class AppComponent {
-  title = 'CAT';
+  title = 'Code Table Automation';
   isSidebarOpen = false;
 
   toggleSidebar() {

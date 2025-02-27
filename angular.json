@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CAT": {
+    "CodeTableAutomation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/cat"
+              "base": "dist/CodeTableAutomation"
             },
             "index": "src/index.html",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CAT:build:production"
+              "buildTarget": "CodeTableAutomation:build:production"
             },
             "development": {
-              "buildTarget": "CAT:build:development"
+              "buildTarget": "CodeTableAutomation:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "CAT:build"
+            "buildTarget": "CodeTableAutomation:build"
           }
         },
         "test": {
